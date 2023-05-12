@@ -69,7 +69,7 @@ public:
 	void destory() { active = false; }
 
 	template <typename T> bool	hasComponent() const {
-		return componentBitSet[getComponentID<T>];
+		return componentBitSet[getComponentTypeID<T>()];
 	}
 
 	//这会将您在调用函数时输入的参数转发给组件 T 的构造函数
