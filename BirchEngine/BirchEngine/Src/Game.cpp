@@ -5,10 +5,11 @@
 #include "Vector2D.h"
 
 Map* map;
+Manager manager;
 
 SDL_Renderer* Game::renderer = nullptr;
+SDL_Event Game::event;
 
-Manager manager;
 auto& player(manager.addEntity());
 
 
@@ -41,12 +42,13 @@ void Game::init(const char* title, int width, int height, bool fullscreen)
 	map = new Map();
 	player.addComponent<TransformComponent>();
 	player.addComponent<SpriteComponet>("assets/player.png");
+	player.addComponent<KeyboardController>();
+
 
 }
 
 void Game::handleEvents()
 {
-	SDL_Event event;
 
 	SDL_PollEvent(&event);
 
@@ -64,11 +66,6 @@ void Game::update()
 {
 	manager.refresh();
 	manager.update();
-	player.getComponent<TransformComponent>().position.ADD(Vector2D(5, 0));
-	if (player.getComponent<TransformComponent>().position.x>100)
-	{
-		player.getComponent<SpriteComponet>().setTex("assets/enemy.png");
-	}
 
 }
 
