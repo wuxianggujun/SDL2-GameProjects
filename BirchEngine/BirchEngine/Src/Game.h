@@ -21,7 +21,7 @@ public:
 	void render();
 	void clean();
 	
-	static void ADDTile(int id, int x, int y);
+	static void ADDTile(int srcX, int srcY,int xpos, int ypos);
 
 	static SDL_Renderer* renderer;
 	static SDL_Event event;
