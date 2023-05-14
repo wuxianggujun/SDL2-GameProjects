@@ -8,11 +8,11 @@ class KeyboardController:public Component
 {
 public:
 	TransformComponent* transform;
-	SpriteComponet* sprite;
+	SpriteComponent* sprite;
 
 	void init() override {
 		transform = &entity->getComponent<TransformComponent>();
-		sprite = &entity->getComponent<SpriteComponet>();
+		sprite = &entity->getComponent<SpriteComponent>();
 
 	}
    

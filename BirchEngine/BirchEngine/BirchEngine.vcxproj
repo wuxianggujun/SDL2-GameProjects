@@ -150,6 +150,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Src\AssetsManager.cpp" />
     <ClCompile Include="Src\Collision.cpp" />
     <ClCompile Include="Src\ECS\ECS.cpp" />
     <ClCompile Include="Src\Game.cpp" />
@@ -160,6 +161,7 @@
     <ClCompile Include="Src\Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Src\AssetsManager.h" />
     <ClInclude Include="Src\Collision.h" />
     <ClInclude Include="Src\ECS\Animation.h" />
     <ClInclude Include="Src\ECS\ColliderComponent.h" />
@@ -172,6 +174,7 @@
     <ClInclude Include="Src\GameObject.h" />
     <ClInclude Include="Src\Game.h" />
     <ClInclude Include="Src\Map.h" />
+    <ClInclude Include="Src\ECS\ProjecttileComponent.h" />
     <ClInclude Include="Src\TextureManager.h" />
     <ClInclude Include="Src\Vector2D.h" />
   </ItemGroup>
